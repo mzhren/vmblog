@@ -1,16 +1,16 @@
 <template>
   <div class="pure-u-1 pure-u-md-3-4">
     <div id="footer">
-      Copyright © 2020
-      <a href="http://www.mzh.ren/" rel="nofollow">码中人</a> |
-      <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">粤ICP备14094633号</a>
+      <p><a href="https://github.com/mzhren/VueMarkdownBlog">VueMarkdownBlog</a> by  <a href="http://www.mzh.ren/" rel="nofollow">码中人</a></p> 
+      <p v-html="siteConfigs.copyright"></p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "copyright"
+  name: "copyright",
+  props:["siteConfigs"]
 };
 </script>
 
