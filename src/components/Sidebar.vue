@@ -36,6 +36,19 @@
           
         </ul>
       </div>
+
+      <div class="widget">
+        <div class="widget-title">
+          <font-awesome-icon icon="external-link-alt" />  广告
+        </div>
+        <ul>
+
+          <li v-for="link in ads">
+            <a :href="link.url" :title="link.ads" target="_blank">{{ link.ads }}</a>
+          </li>
+          
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -48,7 +61,8 @@ export default {
   data() {
     return {
       categories: [],
-      blogroll: []
+      blogroll: [],
+      ads:[]
     };
   },
 
@@ -66,6 +80,10 @@ export default {
 
     axios.get(baseUrl + "/static/blogroll.json").then(response => {
       this.blogroll = response.data;
+    });
+
+    axios.get(baseUrl + "/static/ads.json").then(response => {
+      this.ads = response.data;
     });
   }
 };
