@@ -46,7 +46,7 @@
         },
         created(){
             let baseUrl = document.location.origin;
-            axios.get(baseUrl + '/static/posts.json').then((response)=>{
+            axios.get(baseUrl + '/static/config/posts.json').then((response)=>{
                 this.blogs = this.filterByCategory(response.data);
                 this.totalPages = Math.ceil(this.blogs.length / this.pageSize);
                 this.setPages();

@@ -38,7 +38,7 @@ export default {
   },
   created(){
     let baseUrl = document.location.origin;
-    axios.get(baseUrl + '/static/site_config.json').then((response)=>{
+    axios.get(baseUrl + '/static/config/site_config.json').then((response)=>{
         this.siteConfigs = response.data;
     })
   }

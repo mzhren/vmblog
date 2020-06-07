@@ -29,7 +29,7 @@ export default {
   },
   created() {
     let baseUrl = document.location.origin;
-    axios.get(baseUrl + "/static/posts.json").then(response => {
+    axios.get(baseUrl + "/static/config/posts.json").then(response => {
       this.archives = this.groupByYears(response.data);
       this.years = Object.keys(this.archives).reverse();
     });

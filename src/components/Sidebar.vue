@@ -74,7 +74,7 @@ export default {
 
   created() {
     let baseUrl = document.location.origin;
-    axios.get(baseUrl + "/static/sidebar.json").then(response => {
+    axios.get(baseUrl + "/static/config/sidebar.json").then(response => {
       this.categories = response.data.categories;
       this.blogroll = response.data.blogroll;
       this.ads = response.data.ads;
