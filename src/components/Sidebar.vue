@@ -74,17 +74,23 @@ export default {
 
   created() {
     let baseUrl = document.location.origin;
-    axios.get(baseUrl + "/static/category.json").then(response => {
-      this.categories = response.data;
+    axios.get(baseUrl + "/static/sidebar.json").then(response => {
+      this.categories = response.data.categories;
+      this.blogroll = response.data.blogroll;
+      this.ads = response.data.ads;
     });
 
-    axios.get(baseUrl + "/static/blogroll.json").then(response => {
-      this.blogroll = response.data;
-    });
+    // axios.get(baseUrl + "/static/category.json").then(response => {
+    //   this.categories = response.data;
+    // });
 
-    axios.get(baseUrl + "/static/ads.json").then(response => {
-      this.ads = response.data;
-    });
+    // axios.get(baseUrl + "/static/blogroll.json").then(response => {
+    //   this.blogroll = response.data;
+    // });
+
+    // axios.get(baseUrl + "/static/ads.json").then(response => {
+    //   this.ads = response.data;
+    // });
   }
 };
 </script>

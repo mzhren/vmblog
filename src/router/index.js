@@ -9,8 +9,10 @@ import Archives from '@/components/Archives'
 Vue.use(Router)
 
 
+let mode = document.location.hostname == "blog.jmwjl.com" ?"hash":"history";
+
 export default new Router({
-  mode:'hash',
+  mode:mode,
   routes: [
     {
       path: '',
