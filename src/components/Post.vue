@@ -29,8 +29,8 @@ export default {
   mounted() {
     new Valine({
       el: "#vcomments",
-      appId: "PmIcxexLw4DjaBA6jHvfFM5f-gzGzoHsz",
-      appKey: "3V3gyODpBhiVIk49DTTOdDrn",
+      appId: "eVWOxpPWcFxS8EoA2Eiinrpr-9Nh9j0Va",
+      appKey: "66U2a96lXUS2zgCXed8BdE24",
       // other config
       notify: false,
       verify: false,

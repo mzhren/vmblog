@@ -5,7 +5,6 @@ import Post from '@/components/Post'
 import Page from '@/components/Page'
 import Archives from '@/components/Archives'
 
-
 Vue.use(Router)
 
 let mode = document.location.hostname == "blog.jmwjl.com"?"hash":"history";
