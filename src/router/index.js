@@ -8,11 +8,10 @@ import Archives from '@/components/Archives'
 
 Vue.use(Router)
 
+let mode = document.location.hostname == "blog.jmwjl.com"?"hash":"history";
 
-let mode = document.location.hostname == "blog.jmwjl.com" ?"hash":"history";
-
-export default new Router({
-  mode:mode,
+let router = new Router({
+  mode: mode,
   routes: [
     {
       path: '',
@@ -50,5 +49,21 @@ export default new Router({
       component: Page,
       meta: { title: '页面' }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      console.log(savedPosition)
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
+  
 })
+
+// router.beforeEach((to, from, next) => {
+//   window.scrollTo(0, 0)
+//   next()
+// })
+
+export default router;

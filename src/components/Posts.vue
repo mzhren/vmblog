@@ -55,6 +55,7 @@
         methods:{
             setCurrentPage(currentPage) {
                this.currentPage = currentPage;
+               window.scrollTo(0, 0);
             },
             setPages(){
                 for (let index = 1; index <= this.totalPages; index++) {
